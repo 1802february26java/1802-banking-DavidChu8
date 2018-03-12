@@ -7,10 +7,7 @@ public class Account {
 	
 	// 8 digit account number
 	private int account_number;
-	
-	// a string indicating "checking" or "savings"
-	private String account_type;
-	
+		
 	// 8 digit pin to access account
 	private int account_pin;
 	
@@ -20,11 +17,9 @@ public class Account {
 	// holds account history
 	TreeMap<Date, Double> account_history;
 	
-	
-	public Account(int account_number, String account_type, int account_pin, double balance) {
+	public Account(int account_number, int account_pin, double balance) {
 		super();
 		this.account_number = account_number;
-		this.account_type = account_type;
 		this.account_pin = account_pin;
 		this.balance = balance;
 		this.account_history.put(new Date(), Double.valueOf(this.balance));
@@ -36,14 +31,6 @@ public class Account {
 
 	public void setAccount_number(int account_number) {
 		this.account_number = account_number;
-	}
-
-	public String getAccount_type() {
-		return account_type;
-	}
-
-	public void setAccount_type(String account_type) {
-		this.account_type = account_type;
 	}
 
 	public int getAccount_pin() {
