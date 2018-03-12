@@ -65,4 +65,11 @@ public class Banker {
 		return "No more Account numbers available";
 	}
 	
+	
+	/*
+	 * Add a new customer
+	 */
+	public void addNewCustomer(String fname, String mname, String lname, String ssn, String acctNum) {
+		accounts.put(Integer.valueOf(acctNum), new Customer(fname, mname, lname, ssn));
+	}
 }

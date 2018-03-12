@@ -21,5 +21,6 @@ public class CommandExecution {
 	// Create a new Customer
 	public void registerNewCustomer(String fname, String mname, String lname, String ssn) {
 		String account_number = banker.getNewAccountNumber();
+		
 	}
 }
