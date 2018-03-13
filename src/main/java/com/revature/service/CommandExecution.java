@@ -34,4 +34,12 @@ public class CommandExecution {
 	public double getAccountBal(String accountNum) {
 		return banker.getBal(accountNum);
 	}
+	
+	public void depositBal(String accountNum, double amt) {
+		banker.depositAmt(accountNum, amt);
+	}
+	
+	public void withdrawBal(String accountNum, double amt) {
+		banker.withdrawalAmt(accountNum, amt);
+	}
 }

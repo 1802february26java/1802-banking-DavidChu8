@@ -107,10 +107,20 @@ public final class CustomerInteraction {
 				System.out.println("Your account balance is: $" + commander.getAccountBal(accountNumber));
 				break;
 			case 1:
-				System.out.println("Enter deposit amount: $");
-				
+				do {
+					System.out.println("Enter deposit amount: $");
+					amt = in.nextDouble();
+				} while (amt < 0);
+				commander.depositBal(accountNumber, amt);
 				break;
 			case 2:
+				do {
+					System.out.println("Enter withdrawal amount: $");
+					amt = in.nextDouble();
+					// to do check against balance
+				} while (amt < 0);
+				commander.withdrawBal(accountNumber, amt);
+				break;
 			}
 		} while (choice != 3);
 		 

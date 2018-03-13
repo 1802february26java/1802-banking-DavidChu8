@@ -46,7 +46,7 @@ public class Account {
 	}
 
 	public void setBalance(double balance) {
-		this.balance = balance;
+		this.balance += balance;
 	}
 
 	public TreeMap<Date, Double> getAccount_history() {

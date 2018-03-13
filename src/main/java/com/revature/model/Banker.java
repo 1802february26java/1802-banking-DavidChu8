@@ -86,6 +86,19 @@ public class Banker {
 	public double getBal(String account_number) {
 		Customer current_customer = accounts.get(account_number);
 		Account current_account = current_customer.getCustomer_account();
+		
 		return current_account.getBalance();
+	}
+	
+	public void depositAmt(String account_number, double amt) {
+		Customer current_customer = accounts.get(account_number);
+		Account current_account = current_customer.getCustomer_account();
+		current_account.setBalance(amt);
+	}
+	
+	public void withdrawalAmt(String account_number, double amt) {
+		Customer current_customer = accounts.get(account_number);
+		Account current_account = current_customer.getCustomer_account();
+		current_account.setBalance(-amt);
 	}
 }
