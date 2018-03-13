@@ -1,0 +1,60 @@
+2018-03-13 06:00:36 ERROR ConnectionUtil:31 - Couldn't connect to the database
+java.sql.SQLException: No suitable driver found for jdbc:oracle:thin:@localhost:1521:ORCL
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.revature.repository.ConnectionUtil.getConnection(ConnectionUtil.java:18)
+	at com.revature.repository.ConnectionUtil.main(ConnectionUtil.java:28)
+2018-03-13 06:03:14 ERROR ConnectionUtil:31 - Couldn't connect to the database
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12505, TNS:listener does not currently know of SID given in connect descriptor
+ 
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:715)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:385)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.revature.repository.ConnectionUtil.getConnection(ConnectionUtil.java:18)
+	at com.revature.repository.ConnectionUtil.main(ConnectionUtil.java:28)
+Caused by: oracle.net.ns.NetException: Listener refused the connection with the following error:
+ORA-12505, TNS:listener does not currently know of SID given in connect descriptor
+ 
+	at oracle.net.ns.NSProtocolStream.negotiateConnection(NSProtocolStream.java:272)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:263)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+	... 8 more
+2018-03-13 06:13:31 ERROR ConnectionUtil:31 - Couldn't connect to the database
+java.sql.SQLException: Invalid Oracle URL specified
+	at oracle.jdbc.driver.PhysicalConnection.parseUrl(PhysicalConnection.java:3168)
+	at oracle.jdbc.driver.PhysicalConnection.readConnectionProperties(PhysicalConnection.java:2733)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:691)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:385)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.revature.repository.ConnectionUtil.getConnection(ConnectionUtil.java:18)
+	at com.revature.repository.ConnectionUtil.main(ConnectionUtil.java:28)
+2018-03-13 06:34:11 ERROR ConnectionUtil:32 - Couldn't connect to the database
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12505, TNS:listener does not currently know of SID given in connect descriptor
+ 
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:715)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:385)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.revature.repository.ConnectionUtil.getConnection(ConnectionUtil.java:18)
+	at com.revature.repository.ConnectionUtil.main(ConnectionUtil.java:28)
+Caused by: oracle.net.ns.NetException: Listener refused the connection with the following error:
+ORA-12505, TNS:listener does not currently know of SID given in connect descriptor
+ 
+	at oracle.net.ns.NSProtocolStream.negotiateConnection(NSProtocolStream.java:272)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:263)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+	... 8 more

@@ -19,8 +19,19 @@ public class CommandExecution {
 	}
 	
 	// Create a new Customer
-	public void registerNewCustomer(String fname, String mname, String lname, String ssn) {
+	public String registerNewCustomer(String fname, String mname, String lname, String ssn, double bal) {
 		String account_number = banker.getNewAccountNumber();
-		
+		banker.addNewCustomer(fname, mname, lname, ssn, account_number, bal);
+		return account_number;
+	}
+	
+	// check/verify customer account number
+	public boolean account_registered(String account_number) {
+		return banker.verifyAccountNumber(account_number);
+	}
+	
+	// get the balance
+	public double getAccountBal(String accountNum) {
+		return banker.getBal(accountNum);
 	}
 }

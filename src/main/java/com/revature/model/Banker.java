@@ -54,7 +54,7 @@ public class Banker {
 		boolean didntFindNewNum = true;
 		do {
 			accountNumber = rand.nextInt(99999999) + 10000000;
-			if (account_numbers.contains(Integer.valueOf(accountNumber))) {
+			if (verifyAccountNumber(String.valueOf(accountNumber))) {
 				didntFindNewNum = true;
 			}
 			else
@@ -69,7 +69,23 @@ public class Banker {
 	/*
 	 * Add a new customer
 	 */
-	public void addNewCustomer(String fname, String mname, String lname, String ssn, String acctNum) {
-		accounts.put(Integer.valueOf(acctNum), new Customer(fname, mname, lname, ssn));
+	public void addNewCustomer(String fname, String mname, String lname, String ssn, String acctNum, double bal) {
+		accounts.put(Integer.valueOf(acctNum), new Customer(fname, mname, lname, ssn, acctNum, bal));
+	}
+	
+	/*
+	 * check/verify account number exists, for login
+	 */
+	public boolean verifyAccountNumber(String account_number) {
+		if(account_numbers.contains(Integer.valueOf(account_number))) {
+			return true;
+		}
+		return false;
+	}
+	
+	public double getBal(String account_number) {
+		Customer current_customer = accounts.get(account_number);
+		Account current_account = current_customer.getCustomer_account();
+		return current_account.getBalance();
 	}
 }

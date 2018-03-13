@@ -10,12 +10,13 @@ public class Customer {
 	
 	private Account customer_account;
 	
-	public Customer(String social_security_number, String last_name, String first_name, String middle_name) {
+	public Customer(String ssn, String lname, String fname, String mname, String acctNum, double bal) {
 		super();
-		this.social_security_number = social_security_number;
-		this.last_name = last_name;
-		this.first_name = first_name;
-		this.middle_name = middle_name;
+		this.social_security_number = ssn;
+		this.last_name = lname;
+		this.first_name = fname;
+		this.middle_name = mname;
+		customer_account = new Account(acctNum, social_security_number.substring(0,8), bal);
 		
 	}
 
